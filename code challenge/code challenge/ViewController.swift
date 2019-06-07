@@ -14,6 +14,13 @@ class ViewController: UIViewController {
    
 
     @IBAction func Enter(_ sender: UIButton) {
+        if pass == Password.text{
+            label_1.backgroundColor = UIColor.green
+        }
+        else{
+            label_1.backgroundColor = UIColor.red
+           
+        }
         
     }
     
@@ -21,16 +28,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label_1: UILabel!
 
-   
-    func inputPassword(sender: String ) {
-        //getting input from Text Field
-        if pass == Password.text{
-        label_1.backgroundColor = UIColor.green
-           }
-    else{
-     
-    }
-    }
+
 }
 
 
