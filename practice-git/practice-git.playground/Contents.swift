@@ -503,80 +503,155 @@ nasyasFaceBookProfile.checkProfileSchool()
 
 
 
-class FacebookProfile {
-    var profileName : String
-    var age : Int
-    var friendsList : [String]
-    var relationshipStatus: String
-    
-    //Section that defines functions which support the FacebookProfile Class
-    
-    
-    //sets the ProfileName of the FacebookProfile
-    func setProfileName(userName: String) {
-        profileName = userName
-    }
-    
-    //sets the ProfileAge of the FacebookProfile
-    func setProfileAge(profileAge: Int) {
-        age = profileAge
-    }
-    
-    //sets the Relationship Status for the FacebookProfile
-    func setRelationshipStatu(status: String) {
-        relationshipStatus = status
-    }
-    
-    //adds a friend to the friendslist of a FacebookProfile
-    //this is what you complete and code!
-    
+//class FacebookProfile {
+//    var profileName : String
+//    var age : Int
+//    var friendsList : [String]
+//    var relationshipStatus: String
 //
-//    func setFriendList(friend: String){
-//        friendsList = ["nasya", "madori", "anna"]
+//    //Section that defines functions which support the FacebookProfile Class
 //
+//
+//    //sets the ProfileName of the FacebookProfile
+//    func setProfileName(userName: String) {
+//        profileName = userName
 //    }
-    func addFriend(requester: FacebookProfile, accepter: FacebookProfile){
-        // add the acceptor to the requester flist
-        var requesterName = requester.profileName
-        accepter.friendsList.append(requesterName)
-        //we wunt to accept accpter facebook
-        var accepterName = accepter.profileName
-        requester.friendsList.append(accepterName)
-    }
-    
-    var nasyaProfile = FacebookProfile()
-    var myProfile = FacebookProfile()
-    
-    nasyaProfile.setProfileName(userName: "nasya")
-    myProfile.setProfileName(userName: "madori")
-    
-    
-    
-    
-    //call your function addFriend! -- it should accept to parameters
-    //First Parameter: Requester: this is the Facebook Profile which sends the request
-    //Second Parameter: Accepter: this if the Facebook Profile which accepts the request
-    //Assume: That a Facebook Profile will always accept a friend request, so there's no need to have requester ask or
-    //check to see if accepter actually accepts the request
-    //Things to think about: In real life FB, If Corey's profile is friends with Nataleigh, does Nataleigh's profile have the option to NOT be friends with Corey? What are the directions of friendship, and how does this relate to the addFriends functionality?
-    
-    
-    
-    
-    
-    
-    //extension if you finish early
-    //create a removeFriend—should kinda look the same as addFriend function, but how would you work with the data structure that the friends list is stored in?
-    
-    
-    
-    //init function
-    init() {
-        profileName = ""
-        age = -1
-        friendsList = [String]()
-        relationshipStatus = "Single"
-    }
-}
+//
+//    //sets the ProfileAge of the FacebookProfile
+//    func setProfileAge(profileAge: Int) {
+//        age = profileAge
+//    }
+//
+//    //sets the Relationship Status for the FacebookProfile
+//    func setRelationshipStatu(status: String) {
+//        relationshipStatus = status
+//    }
+//
+//    //adds a friend to the friendslist of a FacebookProfile
+//    //this is what you complete and code!
+//
+////
+////    func setFriendList(friend: String){
+////        friendsList = ["nasya", "madori", "anna"]
+////
+////    }
+//    func addFriend(requester: FacebookProfile, accepter: FacebookProfile){
+//        // add the acceptor to the requester flist
+//        var requesterName = requester.profileName
+//        accepter.friendsList.append(requesterName)
+//        //we wunt to accept accpter facebook
+//        var accepterName = accepter.profileName
+//        requester.friendsList.append(accepterName)
+//    }
+//
+//    var nasyaProfile = FacebookProfile()
+//    var myProfile = FacebookProfile()
+//
+//    nasyaProfile.setProfileName(userName: "nasya")
+//    myProfile.setProfileName(userName: "madori")
+//
+//
+//
+//
+//    //call your function addFriend! -- it should accept to parameters
+//    //First Parameter: Requester: this is the Facebook Profile which sends the request
+//    //Second Parameter: Accepter: this if the Facebook Profile which accepts the request
+//    //Assume: That a Facebook Profile will always accept a friend request, so there's no need to have requester ask or
+//    //check to see if accepter actually accepts the request
+//    //Things to think about: In real life FB, If Corey's profile is friends with Nataleigh, does Nataleigh's profile have the option to NOT be friends with Corey? What are the directions of friendship, and how does this relate to the addFriends functionality?
+//
+//
+//
+//
+//
+//
+//    //extension if you finish early
+//    //create a removeFriend—should kinda look the same as addFriend function, but how would you work with the data structure that the friends list is stored in?
+//
+//
+//
+//    //init function
+//    init() {
+//        profileName = ""
+//        age = -1
+//        friendsList = [String]()
+//        relationshipStatus = "Single"
+//    }
+//}
 //test that your addFriends function work down here OUTSIDE of the class
 //don't forget to actually SET the names of the new Facebook profile obejcts you make, otherwise your if you call addFriend before this, it probably won't work
+
+
+//func factorial(number: Int){
+//    var fac = 1
+//    var num = number
+//    while(num>1){
+//        fac = fac * num
+//        num = num - 1
+//    }
+//    print("factorial of \(number) is \(fac)")
+//}
+//
+//factorial(number: 5)
+
+
+// find the smallest num
+
+func findSamllest(arrayNum: [Int]) -> Int {
+    var smallest = arrayNum[0]
+    for index in 0...arrayNum.count{
+        var numAtIndex = arrayNum[index]
+        if numAtIndex < smallest {
+            smallest = numAtIndex
+        }
+    }
+    return smallest
+}
+
+
+
+//find the second smallest
+func secondSmallest(arrayNum: [Int], smallest: Int) -> Int{
+    var secondSmallest = arrayNum[0]
+    for index in 0...arrayNum.count{
+        var numAtIndex = arrayNum[index]
+        if numAtIndex < secondSmallest && (secondSmallest != smallest){
+            secondSmallest = numAtIndex
+        }
+    }
+    return secondSmallest
+}
+
+
+//add
+
+func sumToSmallestNum(arrayToTest: [Int]){
+    var lowest = findSamllest(arrayNum: arrayToTest)
+    var secondLowest = secondSmallest(arrayNum: arrayToTest, smallest: lowest)
+    var sum = lowest + secondLowest
+    print("The sum is \(sum). the lowest number in \(lowest) and the secondLowest is \(secondLowest)")
+    
+}
+var test = [10, 6, 15, 20]
+
+sumToSmallestNum(arrayToTest: test)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
