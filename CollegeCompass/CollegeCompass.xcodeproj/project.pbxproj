@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18E7944D22B29B950093B01E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7944C22B29B950093B01E /* TableViewController.swift */; };
 		18EC3C6E22B18B8A0020F3B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC3C6D22B18B8A0020F3B8 /* AppDelegate.swift */; };
 		18EC3C7022B18B8A0020F3B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC3C6F22B18B8A0020F3B8 /* ViewController.swift */; };
 		18EC3C7322B18B8A0020F3B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EC3C7122B18B8A0020F3B8 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18E7944C22B29B950093B01E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		18EC3C6A22B18B8A0020F3B8 /* CollegeCompass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeCompass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EC3C6D22B18B8A0020F3B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18EC3C6F22B18B8A0020F3B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				18EC3C6D22B18B8A0020F3B8 /* AppDelegate.swift */,
 				18EC3C6F22B18B8A0020F3B8 /* ViewController.swift */,
+				18E7944C22B29B950093B01E /* TableViewController.swift */,
 				18EC3C7122B18B8A0020F3B8 /* Main.storyboard */,
 				18EC3C7722B18B8D0020F3B8 /* Assets.xcassets */,
 				18EC3C7922B18B8D0020F3B8 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				18EC3C7022B18B8A0020F3B8 /* ViewController.swift in Sources */,
 				18EC3C6E22B18B8A0020F3B8 /* AppDelegate.swift in Sources */,
 				18EC3C7622B18B8A0020F3B8 /* CollegeCompass.xcdatamodeld in Sources */,
+				18E7944D22B29B950093B01E /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
